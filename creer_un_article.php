@@ -14,7 +14,6 @@ if (isset($_POST["title"])) {
     $pdo -> exec($sql);
     $save = true;
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -44,7 +43,7 @@ if (isset($_POST["title"])) {
     <label>Slug</label>
     <input name="slug"></input>
 
-    <button type="submit" value="enregistrer">Enregistrer</button>
+    <button type="submit">Enregistrer</button>
 
     </form>
     
