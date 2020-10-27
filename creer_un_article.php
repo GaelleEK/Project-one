@@ -27,27 +27,59 @@ if (isset($_POST["title"])) {
 
 <?php if (!empty($save) && $save === true): ?>
 
-<div class="alert alert-success">Article enregistré</div>
+    <div class="alert alert-success">Article enregistré</div>
 
 
 <?php endif; ?>
+ <main class="container">
+    <div class="row">
+        <section class="col-12">
 
-    <form method="post">
+    <form class="text-center" method="post">
 
-    <label>Titre</label>
-    <input name="title"></input>
 
-    <label>Contenu</label>
-    <input name="content"></input>
 
-    <label>Slug</label>
-    <input name="slug"></input>
+        <div class="shadow p-3 mb-5 mt-5  rounded"   style="background-color: #4b4b4b">
+                <div class="mt-3 p-2" >
 
-    <button type="submit">Enregistrer</button>
+                    <h2 class=" font-weight-bold ">Titre</h2>
+
+                        <div >
+                            <input class="form-control  "  name="title"></input>
+                        </div>
+
+                </div>
+
+            <div class="mt-3 p-2" >
+                <h2 class=" font-weight-bold">Contenu</h2>
+                <div class="input-group">
+                    <textarea name="content" class="form-control" aria-label="With textarea"></textarea>
+                </div>
+             </div>
+
+           <div class="mt-3  p-2 ">
+                <h2 class="  font-weight-bold">Categorie</h2>
+                <div >
+                    <div class=""><!-- secelt foreach -->
+                        <input class="form-control " name="slug"></input>
+                    </div>
+                </div>
+           </div>
+        </div>
+                <button class=" btn btn-dark m-3 " type="submit" value="enregistrer">Enregistrer</button>
+
+
+            </div>
+
+        </div>
+
+
 
     </form>
-    
-</div>
+
+        </section>
+    </div>
+ </main>
 
 </body>
 </html>
