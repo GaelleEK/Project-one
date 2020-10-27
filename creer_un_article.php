@@ -21,7 +21,7 @@ if (isset($_POST["title"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Créer un article</title>
 </head>
 <body>
@@ -33,21 +33,33 @@ if (isset($_POST["title"])) {
 
 <?php endif; ?>
 
-    <form method="post">
+    <form class="form-group" method="post">
+        <div>
 
-    <label>Titre</label>
-    <input name="title"></input>
+                 <label>Titre</label>
+                 <input name="title"></input>
 
-    <label>Contenu</label>
-    <input name="content"></input>
+                 <label>Contenu</label>
+                 <input name="content"></input>
 
-    <label>Slug</label>
-    <input name="slug"></input>
-
-    <button type="submit" value="enregistrer">Enregistrer</button>
+                 <label>Slug</label>
+                 <input name="slug"></input>
+        </div>
+    
+        <button type="submit" value="enregistrer">Enregistrer</button>
+   hello
 
     </form>
+
+    <div>
+        <p class="text-primary">.text-primary</p>>
+
+        </p>
+    </div>
     
+</div>
+<div>
+
 </div>
 
 </body>
