@@ -20,7 +20,7 @@ if (isset($_POST["title"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Créer un article</title>
 </head>
 <body>
@@ -29,7 +29,9 @@ if (isset($_POST["title"])) {
 <div class="alert alert-success">Article enregistré</div>
 <?php endif; ?>
 
+
     <form method="post">
+    <div class="form-group">
     <label>Titre</label>
     <input name="title"></input>
 
@@ -40,10 +42,10 @@ if (isset($_POST["title"])) {
     <input name="slug"></input>
 
     <button type="submit">Enregistrer</button>
-
+    </div>
     </form>
     
-</div>
+
 
 </body>
 </html>
