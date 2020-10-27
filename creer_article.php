@@ -24,16 +24,12 @@ if (isset($_POST["title"])) {
     <title>Créer un article</title>
 </head>
 <body>
-
+<!-- If permettant d'afficher une alerte si l'article est bien entré en bdd -->
 <?php if (!empty($save) && $save === true): ?>
-
 <div class="alert alert-success">Article enregistré</div>
-
-
 <?php endif; ?>
 
     <form method="post">
-
     <label>Titre</label>
     <input name="title"></input>
 
