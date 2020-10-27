@@ -14,14 +14,13 @@ if (isset($_POST["title"])) {
     $pdo -> exec($sql);
     $save = true;
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
     <title>Créer un article</title>
 </head>
 <body>
@@ -33,33 +32,21 @@ if (isset($_POST["title"])) {
 
 <?php endif; ?>
 
-    <form class="form-group" method="post">
-        <div>
+    <form method="post">
 
-                 <label>Titre</label>
-                 <input name="title"></input>
+    <label>Titre</label>
+    <input name="title"></input>
 
-                 <label>Contenu</label>
-                 <input name="content"></input>
+    <label>Contenu</label>
+    <input name="content"></input>
 
-                 <label>Slug</label>
-                 <input name="slug"></input>
-        </div>
-    
-        <button type="submit" value="enregistrer">Enregistrer</button>
-   hello
+    <label>Slug</label>
+    <input name="slug"></input>
+
+    <button type="submit">Enregistrer</button>
 
     </form>
-
-    <div>
-        <p class="text-primary">.text-primary</p>>
-
-        </p>
-    </div>
     
-</div>
-<div>
-
 </div>
 
 </body>
