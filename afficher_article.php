@@ -4,7 +4,7 @@ $pdo = new PDO('mysql:host=mysql;dbname=project-one;host=127.0.0.1', 'root', '',
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
     ]);
 
-/* requête */
+/* requête le 'desc limit' cible le dernier article crée */
 $query = $pdo->query("SELECT * FROM article ORDER BY createdAt DESC LIMIT 1");
 
 
