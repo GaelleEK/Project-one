@@ -3,6 +3,8 @@
 $pdo = new PDO('mysql:host=mysql;dbname=project-one;host=127.0.0.1', 'root', '', [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
 ]);
+$query = $pdo->query("SELECT * FROM category");
+$categories = $query->fetchAll();
 
 if (isset($_POST["title"])) {
 
@@ -61,9 +63,9 @@ if (isset($_POST["title"])) {
                         <h2 class="  font-weight-bold">Categorie</h2>
                         <div >
                             <select class="form-control " >
-                                <!-- foreach -->
-                                <option><!-- option-->
-                                </option>
+                                <?php foreach ($categories as $category): ?>
+                                    <option><?= $category["category_name"] ?></option>
+                                <?php endforeach; ?>
                             </select>
                         </div>
                     </div>
