@@ -16,33 +16,58 @@ $articles = $query->fetchAll();
 ?>
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liste des articles</title>
-</head>
-<body>
-   <table>
-    <thead class="thead-dark">
-        <tr>
-            <th>Titre</th>
-            <th>Contenu</th>
-            <th>Date de création</th>
-            <th>Date de mise à jour</th>
-            <th>Slug</th>
-        </tr>
-    </thead>
-
-            <?php foreach ($articles as $article): ?>  
-            <tr>
-                <td><?= $article["title"] ?> </td>
-                <td><?= $article["content"] ?></td>
-                <td><?= $article["createdAt"] ?> </td>
-                <td><?= $article["updatedAt"] ?> </td>
-                <td><?= $article["slug"] ?> </td>
-            </tr> 
-            <?php endforeach ?>
-    </table>
-    <a class="btn" href="creer_un_article.php">Créer un article</a>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+                crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+                crossorigin="anonymous"></script>
+        <title>Liste des articles</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar navbar-dark " >
+            <a class="navbar-brand mr-3" href="accueil.php">Accueil</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="#">Article</a>
+                    </li>
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="creer_un_article.php">Creer article</a>
+                    </li>
+                    <li class="nav-item mr-3">
+                        <a class="nav-link" href="#">A propos</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <hr class="bg-dark">
+        <main class="container">
+            <div class="row">
+                <section class="col-12">
+                    <?php foreach ($articles as $article): ?>
+                       <div class="card-deck">
+                           <div class="card">
+                               <img src="https://picsum.photos/350/150" class="card-img-top" alt="...">
+                               <div class="card-body">
+                                   <h5 class="card-title"><?= $article["title"] ?></h5>
+                                   <p class="card-text"><?= $article["content"] ?></p>
+                               </div>
+                               <div class="card-footer">
+                                   <small class="text-muted">creer le : <?= $article["createdAt"] ?> Mise à jour : <?= $article["updatedAt"] ?></small>
+                               </div>
+                           </div>
+                       </div>
+                    <?php endforeach ?>
+                </section>
+            </div>
+        </main>
+    </body>
 </html>
