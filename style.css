@@ -20,7 +20,7 @@
 	--gray: #6c757d;
 	--gray-dark: #343a40;
 	--primary: #007bff;
-	--secondary: #6c757d;
+	--secondary: #bdbdbd;
 	--success: #28a745;
 	--info: #17a2b8;
 	--warning: #ffc107;
@@ -97,7 +97,7 @@ h6 {
 
 p {
     width: 100%;
-    padding: 5rem;
+	padding: 0.1em;
 	margin-top: 1rem;
 	margin-bottom: 1rem
 }
