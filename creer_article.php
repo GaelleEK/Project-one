@@ -12,9 +12,7 @@ $query = $pdo->query("SELECT * FROM category");
 $categories = $query->fetchAll();
 
 // si la variable post-title est affecté et n'est pas vide
-if (isset($_POST["title"])&& !empty($_POST["title"])
-    && isset($_POST["content"])&& !empty($_POST["content"])
-    && isset($_POST["category"])&& !empty($_POST["category"])) {
+if (isset($_POST["title"])&& !empty($_POST["title"])) {
 
         $title = $_POST["title"];
         $content = $_POST["content"];
@@ -23,12 +21,9 @@ if (isset($_POST["title"])&& !empty($_POST["title"])
 
         $sql = "INSERT INTO article (title, content, createdAt, category_id, slug) VALUES ('$title', '$content', NOW(), '$category', '$slug')";
         $pdo -> exec($sql);
+
         $save = true;
 }
-
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -40,18 +35,15 @@ if (isset($_POST["title"])&& !empty($_POST["title"])
 </head>
 <body>
 
-<?php if (isset($message)&& $message === true): ?>
-    <div class="alert alert-success">article enregistré</div>
-<?php else: ?>
-    <div class="alert alert-danger">vérifez votre saisie</div>
-<?php endif; ?>
-
+    <?php if (!empty($save) && $save === true): ?>
+        <div class="alert alert-success">article enregistré</div>
+    <?php endif; ?>
 
     <main class="container">
         <div class="row">
             <section class="col-12">
                 <form class="text-center" method="post">
-                    <div class="shadow p-3 mb-5 mt-5  rounded"   style="background-color: #4b4b4b">
+                    <div class="shadow p-3 mb-5 mt-5 rounded"   style="background-color: #4b4b4b">
 
                         <div class="mt-3 p-2" >
                                 <h2 class=" font-weight-bold ">Titre</h2>
