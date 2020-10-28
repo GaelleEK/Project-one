@@ -21,7 +21,6 @@ $query->bindColumn('slug', $slug, PDO::PARAM_STR);
 $query->bindColumn('createdAt', $dateC);
 $article = $query->fetchAll();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

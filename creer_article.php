@@ -68,7 +68,8 @@ if (isset($_POST["title"])&& !empty($_POST["title"])) {
                             </select>
                         </div>
                     </div>
-                    <button class=" btn btn-dark m-3 " type="submit" value="enregistrer">Enregistrer</button>
+                    <button class=" btn btn-dark m-3" type="submit" value="enregistrer">Enregistrer</button>
+                    <a class="btn btn-dark" href="index.php">Retour à l'accueil</a>
                 </form>
             </section>
         </div>
