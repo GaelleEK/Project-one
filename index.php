@@ -1,7 +1,7 @@
 
 <?php
 /* entete de page */
-include 'accueil.php';
+include 'navbar.php';
 /* corp de page */
 include 'lister.php';
 /* pied de page */
