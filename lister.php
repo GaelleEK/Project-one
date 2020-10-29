@@ -42,7 +42,7 @@ $articles = $query->fetchAll();
                                    <p class="card-text"><?= $article["content"] ?></p>
                                </div>
                                <div class="card-footer">
-                                   <small class="text-muted">creer le : <?= $article["createdAt"] ?> Mise à jour : <?= $article["updatedAt"] ?></small>
+                                   <small class="text-muted">Créer le : <?= $article["createdAt"] ?> Mise à jour : <?= $article["updatedAt"] ?></small>
                                </div>
                            </div>
                        </div>

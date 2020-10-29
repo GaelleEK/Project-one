@@ -10,4 +10,3 @@ function slugify($string, $delimiter = '-') {
     setlocale(LC_ALL, $oldLocale);
     return $clean;
 }
-
