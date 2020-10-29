@@ -19,7 +19,7 @@ $query->bindColumn('content', $content, PDO::PARAM_STR);
 $query->bindColumn('category_id', $category, PDO::PARAM_INT);
 $query->bindColumn('slug', $slug, PDO::PARAM_STR);
 $query->bindColumn('createdAt', $dateC);
-$article = $query->fetchAll();
+$articles = $query->fetchAll();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,17 +33,19 @@ $article = $query->fetchAll();
     <main class="container">
         <div class="row">
             <section class="col-6 ">
+                <?php foreach ($articles as $article): ?>
                 <div class="card-deck">
                     <div class="card mt-5">
                         <img src="https://picsum.photos/350/150?random=1" class="card-img-top" alt="..." />
                         <div class="card-body">
-                            <h5 class="card-title"><?= $title ?></h5>
-                            <p class="card-text"><?= $content ?></p>
-                            <p class="card-text"><?= $category ?></p>
+                            <h5 class="card-title"><?= $article["title"] ?></h5>
+                            <p class="card-text"><?= $article["content"] ?></p>
+                            <p class="card-text"><?= $article["category_id"] ?></p>
                         </div>
                         <div class="card-footer">
                             <small class="text-muted">créer le : <?= $dateC ?> </small>
                         </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </section>
