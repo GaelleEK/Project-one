@@ -13,6 +13,7 @@ $query->bindValue(':date', date("Y-m-d"), PDO::PARAM_STR);
 
 $articles = $query->fetchAll();
 
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -36,6 +37,7 @@ $articles = $query->fetchAll();
                     <?php foreach ($articles as $article): ?>
                        <div class="card-deck">
                            <div class="card mt-5">
+
                                <img src="https://picsum.photos/350/150?random=1" class="card-img-top" alt="...">
                                <div class="card-body">
                                    <h5 class="card-title"><?= $article["title"] ?></h5>
