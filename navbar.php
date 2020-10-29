@@ -22,7 +22,9 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item mr-3 ml-3">
-                    <a class="nav-link" href="page1.php">Article</a>
+
+                    <?php require 'menu_cat.php' ?>
+
                 </li>
                 <li class="nav-item mr-3">
                     <a class="nav-link" href="page2.php"">Creer article</a>

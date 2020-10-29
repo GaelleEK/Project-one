@@ -25,16 +25,6 @@ if (isset($_POST["title"])&& !empty($_POST["title"])) {
         $save = true;
 }
 ?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Créer un article</title>
-</head>
-<body>
-
     <?php if (!empty($save) && $save === true): ?>
         <div class="alert alert-success">article enregistré</div>
     <?php endif; ?>
