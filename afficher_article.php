@@ -21,21 +21,12 @@ $query->bindColumn('slug', $slug, PDO::PARAM_STR);
 $query->bindColumn('createdAt', $dateC);
 $articles = $query->fetchAll();
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
 <body>
     <main class="container">
-        <div class="row">
-            <section class="col-6 ">
-                <?php foreach ($articles as $article): ?>
-                <div class="card-deck">
-                    <div class="card mt-5">
+        <div class="row row-cols-1 row-cols-md-2">
+            <?php foreach ($articles as $article): ?>
+                <div class="col mt-5 ">
+                    <div class="card ">
                         <img src="https://picsum.photos/350/150?random=1" class="card-img-top" alt="..." />
                         <div class="card-body">
                             <h5 class="card-title"><?= $article["title"] ?></h5>
@@ -45,10 +36,9 @@ $articles = $query->fetchAll();
                         <div class="card-footer">
                             <small class="text-muted">créer le : <?= $dateC ?> </small>
                         </div>
-                        <?php endforeach; ?>
                     </div>
                 </div>
-            </section>
+            <?php endforeach; ?>
         </div>
     </main>
 </body>
