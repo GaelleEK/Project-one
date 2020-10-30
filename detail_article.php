@@ -9,5 +9,5 @@ $query = "SELECT * FROM article WHERE id = $id";
 
 $bdd -> query($query);
 
-$bdd =
+
 
