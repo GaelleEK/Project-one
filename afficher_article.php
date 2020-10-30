@@ -25,19 +25,21 @@ $articles = $query->fetchAll();
     <main class="container">
         <div class="row row-cols-1 row-cols-md-2">
             <?php foreach ($articles as $article): ?>
-                <div class="col mt-5 ">
-                    <div class="card ">
-                        <img src="https://picsum.photos/350/150?random=1" class="card-img-top" alt="..." />
-                        <div class="card-body">
-                            <h5 class="card-title"><?= $article["title"] ?></h5>
-                            <p class="card-text"><?= $article["content"] ?></p>
-                            <p class="card-text"><?= $article["category_id"] ?></p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">créer le : <?= $dateC ?> </small>
+                <a href="modifier_artcile.php?id=<?=$item["id"]?>">
+                    <div class="col mt-5 ">
+                        <div class="card ">
+                            <img src="https://picsum.photos/350/150?random=1" class="card-img-top" alt="..." />
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $article["title"] ?></h5>
+                                <p class="card-text"><?= $article["content"] ?></p>
+                                <p class="card-text"><?= $article["category_id"] ?></p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">créer le : <?= $dateC ?> </small>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             <?php endforeach; ?>
         </div>
     </main>
