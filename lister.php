@@ -36,17 +36,18 @@ $articles = $query->fetchAll();
                 <section class="col-12 ">
                     <?php foreach ($articles as $article): ?>
                        <div class="card-deck">
-                           <div class="card mt-5">
-
-                               <img src="https://picsum.photos/350/150?random=1" class="card-img-top" alt="...">
-                               <div class="card-body">
-                                   <h5 class="card-title"><?= $article["title"] ?></h5>
-                                   <p class="card-text"><?= $article["content"] ?></p>
+                           <a class="text-decoration-none text-dark" href="modifier_artcile.php?id=<?=$item["id"]?>">
+                               <div class="card mt-5">
+                                   <img src="https://picsum.photos/350/150?random=1" class="card-img-top" alt="...">
+                                   <div class="card-body">
+                                       <h5 class="card-title"><?= $article["title"] ?></h5>
+                                       <p class="card-text"><?= $article["content"] ?></p>
+                                   </div>
+                                   <div class="card-footer">
+                                       <small class="text-muted">Créer le : <?= $article["createdAt"] ?> Mise à jour : <?= $article["updatedAt"] ?></small>
+                                   </div>
                                </div>
-                               <div class="card-footer">
-                                   <small class="text-muted">Créer le : <?= $article["createdAt"] ?> Mise à jour : <?= $article["updatedAt"] ?></small>
-                               </div>
-                           </div>
+                           </a>
                        </div>
                     <?php endforeach ?>
                 </section>
