@@ -7,6 +7,7 @@ include 'afficher_article.php';
 /* pied de page */
 include 'footer.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
