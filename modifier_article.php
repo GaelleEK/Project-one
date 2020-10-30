@@ -1,11 +1,27 @@
 <?php
-include('fonctions.php');
+//include('fonctions.php');
+//$bdd = connect_bdd();
 
-$id = $_POST["id"];
+$pdo = new PDO('mysql:host=mysql;dbname=project-one;host=127.0.0.1', 'root', '', [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+        ]);
 
-$bdd = connect_bdd();
+$query = $pdo ->prepare("SELECT * FROM article WHERE id = :id");
+$id = $_GET['id'];
+$id = intval($id);
+$query -> bindParam(':id', $id, PDO::PARAM_INT);
+$query ->execute();
+$articles = $query -> fetch();
 
-$query = "SELECT * FROM article WHERE id = $id";
+
+?>
+
+
+
+
+
+
+
 
 
 
