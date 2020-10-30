@@ -14,7 +14,10 @@ $query ->execute();
 $articles = $query -> fetch();
 
 
-?>
+//faire un formulaire avec
+
+//<input type="text" name="title" value="<?php echo  $article["title"] ?>"></input> etc
+//et finir avec un type submit
 
 
 
