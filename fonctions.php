@@ -11,13 +11,3 @@ function slugify($string, $delimiter = '-') {
     return $clean;
 }
 
-function connect_bdd() {
-    try {
-        global $pdo = new PDO('mysql:host=mysql;dbname=project-one;host=127.0.0.1', 'root', '', [
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-        ]);
-    }
-    catch (Exception $e) {
-        die('Erreur : ' . $e->getMessage());
-    }
-}

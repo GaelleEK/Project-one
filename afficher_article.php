@@ -25,7 +25,7 @@ $articles = $query->fetchAll();
     <main class="container">
         <div class="row row-cols-1 row-cols-md-2">
             <?php foreach ($articles as $article): ?>
-                <a class="text-decoration-none text-dark href="detail_article.php?id=<?=$article["id"]?>">
+                <a class="text-decoration-none text-dark href="page4.php?id=<?=$article["id"]?>">
                     <div class="col mt-5 ">
                         <div class="card ">
                             <img src="https://picsum.photos/350/150?random=1" class="card-img-top" alt="..." />

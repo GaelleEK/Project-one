@@ -36,7 +36,7 @@ $articles = $query->fetchAll();
                 <section class="col-12 mt-5 ">
                     <?php foreach ($articles as $article): ?>
                        <div class="card mb-5">
-                           <a class="text-decoration-none text-dark" href="detail_article.php?id=<?=$article["id"]?>">
+                           <a class="text-decoration-none text-dark" href="page4.php?id=<?=$article["id"]?>">
                                <div class="card">
                                    <img src="https://picsum.photos/350/150?random=1" class="card-img-top" alt="...">
                                    <div class="card-body">
