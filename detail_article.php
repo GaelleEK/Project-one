@@ -15,6 +15,7 @@ $query->execute();
 $article= $query->fetch();
 
 ?>
+<body>
 <div class="col mt-5 ">
     <div class="card ">
         <img src="https://picsum.photos/350/150?random=1" class="card-img-top" alt="..." />
@@ -28,3 +29,4 @@ $article= $query->fetch();
         </div>
     </div>
 </div>
+</body>
