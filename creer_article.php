@@ -28,7 +28,7 @@ if (isset($_POST["title"])&& !empty($_POST["title"])) {
     <?php if (!empty($save) && $save === true): ?>
         <div class="alert alert-success">article enregistré</div>
     <?php endif; ?>
-
+<body>
     <main class="container">
         <div class="row">
             <section class="col-12">

@@ -32,7 +32,7 @@ if (isset($_POST["modifier"])) {
 <?php if (!empty($save) && $save === true): ?>
     <div class="alert alert-success">article modifié</div> <!-- -->
 <?php endif; ?>
-
+<body>
 <main class="container">
     <div class="row">
         <section class="col-12">
@@ -65,7 +65,7 @@ if (isset($_POST["modifier"])) {
         </section>
     </div>
 </main>
-
+</body>
 
 
 
