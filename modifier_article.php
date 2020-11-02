@@ -41,7 +41,7 @@ if (isset($_POST["modifier"])) {
                     <div class="mt-3 p-2">
                         <h2 class=" font-weight-bold ">Titre</h2>
                         <div>
-                            <input class="form-control" name="title"><?= $article["title"] ?></input>
+                            <input class="form-control" name="title" value="<?= $article["title"] ?>">
                         </div>
                     </div>
                     <div class="mt-3 p-2">
