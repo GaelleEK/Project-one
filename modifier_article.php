@@ -30,7 +30,7 @@ if (isset($_POST["modifier"])) {
 ?>
 
 <?php if (!empty($save) && $save === true): ?>
-    <div class="alert alert-success">article modifié</div> <!-- -->
+    <div class="alert alert-success">article modifié</div>
 <?php endif; ?>
 <body>
 <main class="container">
@@ -51,7 +51,7 @@ if (isset($_POST["modifier"])) {
                         </div>
                     </div>
                     <div class="mt-3  p-2 ">
-                        <h2 class="  font-weight-bold">Categorie</h2>
+                        <h2 class="font-weight-bold">Categorie</h2>
                         <select class="form-control" name="category">
                             <?php foreach ($categories as $category): ?>
                                 <option value="<?= $category["id"] ?>"><?= $category["category_name"] ?></option>
