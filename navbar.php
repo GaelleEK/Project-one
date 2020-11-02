@@ -28,7 +28,7 @@ $categories = $query->fetchAll();
                         <a class="dropdown-item" href="page1.php">Tous les articles</a>
                         <div class="dropdown-divider"></div>
                         <?php foreach ($categories as $category): ?>
-                        <a class="dropdown-item" href="page6.php?<?= $category["id"] ?>"><?= $category["category_name"] ?></a>
+                        <a class="dropdown-item" href="page6.php?id=<?= $category["id"] ?>"><?= $category["category_name"] ?></a>
                         <?php endforeach; ?>
                     </div>
                    <!-- <a class="nav-link" href="page1.php">Article</a>-->
