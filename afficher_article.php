@@ -5,7 +5,7 @@ $pdo = new PDO('mysql:host=mysql;dbname=project-one;host=127.0.0.1', 'root', '',
 ]);
 
 /* requête le 'desc limit' cible le dernier article crée */
-$query = $pdo->query("SELECT * FROM article ORDER BY createdAt DESC LIMIT 5");
+$query = $pdo->query("SELECT * FROM article ORDER BY createdAt DESC LIMIT 6");
 
 
 /* code permettant d'afficher au format date les dates provenant de la bdd */

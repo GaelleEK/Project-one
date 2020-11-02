@@ -17,9 +17,11 @@ $query = $pdo->query("SELECT *
 ?>
 
 <?php foreach ($articles as $article): ?>
-                <a class="text-decoration-none text-dark href="page4.php?id=<?=$article["id"]?>
-                    <div class="col mt-5 ">
-                        <div class="card ">
+<main class="container">
+        <div class="row">
+            <div class="col-12 mt-5">
+                <div class="card ">
+                    <a class="text-decoration-none text-dark" href="page4.php?id=<?=$article['id']?>">
                             <img src="https://picsum.photos/350/150?random=1" class="card-img-top" alt="..." />
                             <div class="card-body">
                                 <h5 class="card-title"><?= $article["title"] ?></h5>
@@ -30,7 +32,10 @@ $query = $pdo->query("SELECT *
                                 <small class="text-muted">créer le : <?= $dateC ?> </small>
                             </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
+            </div>
+        </div>
+</main>
             <?php endforeach; ?>
 
